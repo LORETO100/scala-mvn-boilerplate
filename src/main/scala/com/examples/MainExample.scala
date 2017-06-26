@@ -16,7 +16,7 @@ object MainExample {
     val sc = new SparkContext(conf)
 
     logger.info("=> jobName \"" + jobName + "\"")
-    val sampleRDD = sc.parallelize(1 to 100)
-    println(sampleRDD.take(3))
+    val sampleRDD = sc.parallelize(1 to 10)
+    sampleRDD.collect().foreach(println)
   }
 }
